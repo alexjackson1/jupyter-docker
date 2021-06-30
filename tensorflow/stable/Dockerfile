@@ -1,4 +1,4 @@
-FROM alexjackson1/jupyter
+FROM alexjackson1711/jupyter
 
 RUN apt-get update && \
     apt-get -y install pkg-config python3-pip && \

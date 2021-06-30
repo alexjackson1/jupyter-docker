@@ -1,15 +1,15 @@
-# Note: this Dockerfile inherits from alexjackson1/tensorflow:build-env in
+# Note: this Dockerfile inherits from alexjackson1711/tensorflow:build-env in
 # order to ensure that the build process stays within Docker Hub's
 # 2 hour build window. The downside to inheriting from build-env is
 # that the image ends up much larger, due to the retained intermediate
 # build images. I've set this Dockerfile up in such a way that it can
-# also inherit from alexjackson1/jupyter without any further changes. The
+# also inherit from alexjackson1711/jupyter without any further changes. The
 # build time will be slightly longer, but the image will be much more
 # compact.
-# TL;DR: You want to use "FROM alexjackson1/jupyter"
+# TL;DR: You want to use "FROM alexjackson1711/jupyter"
 
-#FROM alexjackson1/jupyter
-FROM alexjackson1/tensorflow:build-env
+#FROM alexjackson1711/jupyter
+FROM alexjackson1711/tensorflow:build-env
 
 # Docker Hub currently limits automated builds to 1 CPU and 2GB of RAM.
 # As such, I set the default concurrency to 2 jobs to try to avoid resource

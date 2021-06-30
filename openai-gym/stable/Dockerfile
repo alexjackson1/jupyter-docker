@@ -1,4 +1,4 @@
-FROM alexjackson1/tensorflow:stable
+FROM alexjackson1711/tensorflow:stable
 
 RUN apt-get update && \
     apt-get -y install xvfb zlib1g python3-opengl ffmpeg libsdl2-2.0-0 libboost-python1.67.0 libboost-thread1.67.0 libboost-filesystem1.67.0 libboost-system1.67.0 fluidsynth build-essential swig python3-dev cmake zlib1g-dev libsdl2-dev libboost-all-dev wget unzip && \

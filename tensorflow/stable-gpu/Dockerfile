@@ -1,4 +1,4 @@
-FROM alexjackson1/jupyter
+FROM alexjackson1711/jupyter
 
 RUN /usr/local/bin/pip --no-cache-dir install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.9.0-cp27-none-linux_x86_64.whl && \
     rm -r /root/.cache/pip/

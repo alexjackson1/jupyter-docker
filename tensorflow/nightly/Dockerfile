@@ -1,4 +1,4 @@
-FROM alexjackson1/jupyter
+FROM alexjackson1711/jupyter
 
 #Note: ci.tensorflow.org does not seem to support TLS. Please understand that by running
 #this image, you are blindly trusting whomever was claiming to be ci.tensorflow.org at
