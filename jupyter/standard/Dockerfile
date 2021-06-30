@@ -1,5 +1,4 @@
 FROM eboraas/debian:stable
-MAINTAINER Ed Boraas <ed@boraas.ca>
 
 RUN apt-get update && \
     apt-get -y install pkg-config python3 python3-pip libffi6 libfreetype6 libpng16-16 libjpeg62-turbo libopenblas-base libffi-dev libfreetype6-dev libpng-dev libjpeg62-turbo-dev libopenblas-dev python3-tk && \
@@ -17,5 +16,5 @@ RUN python3 -c "import matplotlib.pyplot"
 WORKDIR /mnt/notebooks
 EXPOSE 8888
 
-CMD ["/bin/sh", "-c", "/usr/local/bin/jupyter-notebook --no-browser --ip=0.0.0.0 --notebook-dir=/mnt/notebooks"]
+CMD ["/bin/sh", "-c", "/usr/local/bin/jupyter-notebook --no-browser --ip=0.0.0.0 --notebook-dir=/mnt/notebooks --allow-root"]
 

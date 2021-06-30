@@ -1,5 +1,4 @@
-FROM eboraas/jupyter
-MAINTAINER Ed Boraas <ed@boraas.ca>
+FROM alexjackson1/jupyter
 
 RUN apt-get update && \
     apt-get -y install pkg-config python3-pip && \
@@ -15,5 +14,5 @@ EXPOSE 6006
 
 WORKDIR /mnt/notebooks
 
-CMD ["/bin/sh", "-c", "/usr/local/bin/jupyter-notebook --no-browser --ip=0.0.0.0 --notebook-dir=/mnt/notebooks"]
+CMD ["/bin/sh", "-c", "/usr/local/bin/jupyter-notebook --no-browser --ip=0.0.0.0 --notebook-dir=/mnt/notebooks --allow-root"]
 

@@ -1,5 +1,4 @@
-FROM eboraas/tensorflow:stable-sandybridge
-MAINTAINER Ed Boraas <ed@boraas.ca>
+FROM alexjackson1/tensorflow:stable-sandybridge
 
 RUN apt-get update && \
     apt-get -y install xvfb zlib1g python-opengl ffmpeg libsdl2-2.0-0 libboost-python1.58.0 libboost-thread1.58.0 libboost-filesystem1.58.0 libboost-system1.58.0 fluidsynth && \

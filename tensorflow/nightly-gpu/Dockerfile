@@ -1,5 +1,4 @@
-FROM eboraas/jupyter
-MAINTAINER Ed Boraas <ed@boraas.ca>
+FROM alexjackson1/jupyter
 
 #Note: ci.tensorflow.org does not seem to support TLS. Please understand that by running
 #this image, you are blindly trusting whomever was claiming to be ci.tensorflow.org at
@@ -18,5 +17,5 @@ EXPOSE 6006
 
 WORKDIR /mnt/notebooks
 
-CMD ["/bin/sh", "-c", "/usr/local/bin/jupyter-notebook --no-browser --ip=0.0.0.0 --notebook-dir=/mnt/notebooks"]
+CMD ["/bin/sh", "-c", "/usr/local/bin/jupyter-notebook --no-browser --ip=0.0.0.0 --notebook-dir=/mnt/notebooks --allow-root"]
 

@@ -1,5 +1,4 @@
 FROM eboraas/debian:stable
-MAINTAINER Ed Boraas <ed@boraas.ca>
 
 RUN apt-get update && \
     apt-get -y install pkg-config python3 python3-pip && \
@@ -14,5 +13,5 @@ RUN apt-get update && \
 WORKDIR /mnt/notebooks
 EXPOSE 8888
 
-CMD ["/bin/sh", "-c", "/usr/local/bin/jupyter-notebook --no-browser --ip=0.0.0.0 --notebook-dir=/mnt/notebooks"]
+CMD ["/bin/sh", "-c", "/usr/local/bin/jupyter-notebook --no-browser --ip=0.0.0.0 --notebook-dir=/mnt/notebooks --allow-root"]
 

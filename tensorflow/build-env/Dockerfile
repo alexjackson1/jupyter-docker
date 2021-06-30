@@ -1,5 +1,4 @@
-FROM eboraas/jupyter
-MAINTAINER Ed Boraas <ed@boraas.ca>
+FROM alexjackson1/jupyter
 
 # This Dockerfile builds an image suitable for doing custom builds of TensorFlow, either
 # interactively or by inheriting from this image. Note that resulting images will have
